@@ -5,16 +5,25 @@ public class Human {
 //  for each of the properties should be 3,
 //  except for health - that should be 100.
 //-------------------------------------------//
-  public int health = 100;
-  public int strength = 3;
-  public int intelligence = 3;
-  public int stealth = 3;
+  public int health;
+  public int strength;
+  public int intelligence;
+  public int stealth;
   public String name;
 
-  public Human() { }
+  public Human() { 
+	this.stealth = 3;
+	this.strength = 3;
+	this.intelligence = 3;
+	this.health = 100;
+  }
   
   public Human(String name) {
-	  this.name = name;
+	this.name = name;
+	this.stealth = 3;
+	this.strength = 3;
+	this.intelligence = 3;
+	this.health = 100;
   }
 
   public Human(String name, int health, int strength, int intelligence, int stealth) {
@@ -26,22 +35,22 @@ public class Human {
 
 // ---- GETTERS ----- //
   public int getHealth() {
-    System.out.println("Health: " + health);
+//    System.out.println("Health: " + health);
     return health;
   }
 
   public int getStrength() {
-    System.out.println("Strength: " + strength);
+//    System.out.println("Strength: " + strength);
     return strength;
   }
 
   public int getIntelligence() {
-    System.out.println("Intelligence: " + intelligence);
+//    System.out.println("Intelligence: " + intelligence);
     return intelligence;
   }
 
   public int getStealth() {
-    System.out.println("Stealth: " + stealth);
+//    System.out.println("Stealth: " + stealth);
     return stealth;
   }
 
@@ -69,6 +78,7 @@ public class Human {
   public void attacks(Human foe) {
     foe.health -= this.strength;
     System.out.println("Attacks foe!");
-    
   }
+  
+  
 }
